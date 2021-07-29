@@ -9,7 +9,7 @@ class TagManipulator():
         for i in range(tempResults.__len__()):
             tempResults[i] = tempResults[i].lstrip()
 
-        if( len(tempResults[0]) > 0 ):
-            result = tempResults 
+            if( len(tempResults[i]) > 1 ):
+                result.append(tempResults[i])
 
         return result
