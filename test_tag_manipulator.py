@@ -95,3 +95,17 @@ def test_split_one_string_with_comma_after_result_array_of_one():
 
     # assert
     assert result == expResult
+
+def test_split_more_strings_with_comma_between_result_array_of_two():
+    # arrange
+    stringToSplit = "java byte code, python"
+    regex = ","
+    expResult = ["java byte code", "python"]
+    result = None
+    cut = TagManipulator()
+
+    # act
+    result = cut.parse_string(stringToSplit, regex)
+
+    # assert
+    assert result == expResult
